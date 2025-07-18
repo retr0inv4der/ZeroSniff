@@ -4,11 +4,11 @@
 
 # Add source to this project's executable.
 
-include_directories("C:/npcap/Include")
-link_directories("C:/npcap/Lib/x64")
+include_directories("./lib/npcap/Include")
+link_directories("./lib/npcap/Lib/x64")
 
 
-add_executable (ZeroSniff "ZeroSniff.cpp" "ZeroSniff.h" "src/hello.cpp" "src/UserInterfaceUtils.cpp" "include/UserInterfaceUtils.h")
+add_executable (ZeroSniff "ZeroSniff.cpp" "ZeroSniff.h" "src/hello.cpp" "src/UserInterfaceUtils.cpp" "include/UserInterfaceUtils.h" "src/siff.cpp" "include/sniff.h")
 target_link_libraries(ZeroSniff PRIVATE wpcap Packet Ws2_32)
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET ZeroSniff PROPERTY CXX_STANDARD 20)
