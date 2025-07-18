@@ -20,7 +20,7 @@ Testing/
 *.a
 *.exe
 *.dll
-*.lib
+
 *.pdb
 
 *.vcxproj
